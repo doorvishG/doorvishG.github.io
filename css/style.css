@@ -42,11 +42,11 @@ hr {
 }
 
 .nav-item  a:hover {
-    color: #0f446a !important;
+    color: #a27ed8 !important;
 }
 
 .nav-link.active {
-    color: #8B4513 !important;
+    color: #7eb4d8 !important;
 }
 
 .dropdown-menu {
@@ -191,4 +191,36 @@ div.gallery img:hover {
     -webkit-transition-duration: 0.3s; /* Safari */
     box-shadow: 10px 10px 5px #888888;
     z-index: 1;
-    }
+}
+
+.send-button {
+  float:right;
+  margin-top: 15px;
+  height: 34px;
+  width: 100px;
+  background-color:#d8cf7e;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.button {
+  width: 100px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px ;
+  letter-spacing: 2px;
+}
+
+.button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+.contactlist a {
+  text-decoration:none;
+  color:black;
+}
