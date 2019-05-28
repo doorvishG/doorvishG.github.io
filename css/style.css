@@ -50,7 +50,15 @@ hr {
 }
 
 .dropdown-menu {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(139,69,19,0.9);
+}
+
+.dropdown-menu a {
+  color:#7eb4d8 !important;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
 }
 
 .carousel {
@@ -67,9 +75,11 @@ hr {
   position: absolute;
   transition: opacity 1s ease-in-out;
 }
+
 .carousel-inner .carousel-item:first-of-type {
   position: relative;
 }
+
 .carousel-inner .active {
   opacity: 1;
 }
@@ -141,7 +151,7 @@ section a{
 }
 
 section a:hover{
-    color:black;
+    color:#7eb4d8 !important;
     text-decoration:none;
 }
 
