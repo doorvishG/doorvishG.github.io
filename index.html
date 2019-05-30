@@ -240,13 +240,28 @@
                 <script>
 
                   $(function(){
-                      $('#show').on('click',function(){
-                          $('.card-reveal').slideToggle('slow');
-                      });
+                      $('#show1').on('click',function(){
+                         $('#aimcard').slideToggle('slow');
+                     });
 
-                      $('.card-reveal .close').on('click',function(){
-                          $('.card-reveal').slideToggle('slow');
-                      });
+                     $('#aimcard .close').on('click',function(){
+                         $('#aimcard').slideToggle('slow');
+                     });
+
+                     $('#show2').on('click',function(){
+                        $('#facilitycard').slideToggle('slow');
+                    });
+
+                    $('#facilitycard .close').on('click',function(){
+                        $('#facilitycard').slideToggle('slow');
+                    });
+                    $('#show3').on('click',function(){
+                       $('#expertisecard').slideToggle('slow');
+                   });
+
+                   $('#expertisecard .close').on('click',function(){
+                       $('#expertisecard').slideToggle('slow');
+                   });
                   });
 
                   $(document).ready(function(){
