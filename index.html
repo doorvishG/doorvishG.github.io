@@ -67,8 +67,7 @@
                     </div>
                   </li>
                   <li class="nav-item"><a href="../html/contactus.html" class="nav-link">Contact Us</a></li>
-                  <li class="nav-item"><a href="../html/reservations.html" class="nav-link">Reservations</a></li>
-
+                  <li class="nav-item"><a href="../html/reservations.html" class="btn btn-primary btn-lg round outline" role="button">Book Now</a></li>
                 </ul>
               </div>
             </nav>
@@ -113,38 +112,75 @@
                     <i class="fas fa-futbol"></i>
                     <a href="https://www.skysports.com/" target="_blank">Sky Sports website</a>
                   </div>
+                  <div class="fl-fl float-form shadow">
+                    <i class="fas fa-file-signature"></i>
+                    <a href="#" target="_blank">JS form</a>
+                  </div>
                 </div>
                 <div class="row mt-2">
                   <div class="col-lg-4 col-12">
-                    <div class="card">
-                      <img class="card-img-top" src="../images/aim.jpg" alt="aim">
-                      <div class="card-body">
-                        <h2 class="card-title text-center">Our Aim..</h2>
-                        <p class="card-text text-justify">Rejuvenate Wellness & Spa is dedicated solely to treating you to an essential and enduring state of well-being through a unique and distinctive approach. Our primary concern is to fulfil your wishes and improve your well-being.</p>
-                        <a href="#" class="btn btn-outline-info btn-sm">Read More...</a>
+                      <div class="card">
+                          <div class="card-image">
+                              <img class="img-fluid" src="../images/aim.jpg">
+                          </div><!-- card image -->
+                          <div class="card-content">
+                              <h2 class="card-title">Our Aim
+                              <button type="button" id="show1" class="btn btn-custom pull-right" aria-label="Left Align">
+                                  <i class="fas fa-info-circle"></i>
+                              </button>
+                              </h2>
+                          </div><!-- card content -->
+                          <div class="card-reveal" id="aimcard">
+                              <h2 class="card-title">Our Aim
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                                </button>
+                              </h2>
+                              <p class="text-justify">Rejuvenate Wellness & Spa is dedicated solely to treating you to an essential and enduring state of well-being through a unique and distinctive approach. Our primary concern is to fulfil your wishes and improve your well-being.</p>
+                          </div><!-- card reveal -->
                       </div>
-                    </div>
                   </div>
                   <div class="col-lg-4 col-12">
-                    <div class="card">
-                      <img class="card-img-top" src="../images/facility.jpg" alt="facility">
-                      <div class="card-body">
-                        <h2 class="card-title text-center">Our Facilities..</h2>
-                        <p class="card-text text-justify">Our Spas are surrounded by a tranquil and welcoming atmosphere and our caring therapists invite you to a deep relaxation in beautiful settings. We offer state of the art wellness for an integrated experience to help you relax, re-energize and rejuvenate.</p>
-                        <a href="#" class="btn btn-outline-info btn-sm">Read More...</a>
-                      </div>
-                    </div>
-                  </div>
-                    <div class="col-lg-4 col-12">
                       <div class="card">
-                        <img class="card-img-top" src="../images/expertise.jpg" alt="expertise">
-                        <div class="card-body">
-                          <h2 class="card-title text-center">Our Expertise..</h2>
-                          <p class="card-text text-justify">Our expertise is based on ancient therapeutic wisdom and you will enjoy the enhanced benefits of holistic care in line with our treatments and protocols, gently restoring a lasting sense of serenity, vitality and strength.</p>
-                          <a href="#" class="btn btn-outline-info btn-sm">Read More...</a>
-                        </div>
+                          <div class="card-image">
+                              <img class="img-fluid" src="../images/facility.jpg">
+                          </div><!-- card image -->
+                          <div class="card-content">
+                              <h2 class="card-title">Our Facilities
+                              <button type="button" id="show2" class="btn btn-custom pull-right" aria-label="Left Align">
+                                  <i class="fas fa-info-circle"></i>
+                              </button>
+                              </h2>
+                          </div><!-- card content -->
+                          <div class="card-reveal" id="facilitycard">
+                              <h2 class="card-title">Our Facilities
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                                </button>
+                              </h2>
+                              <p class="text-justify">Rejuvenate Wellness & Spa is dedicated solely to treating you to an essential and enduring state of well-being through a unique and distinctive approach. Our primary concern is to fulfil your wishes and improve your well-being.</p>
+                          </div><!-- card reveal -->
                       </div>
-                    </div>
+                  </div>
+                  <div class="col-lg-4 col-12">
+                      <div class="card">
+                          <div class="card-image">
+                              <img class="img-fluid" src="../images/expertise.jpg">
+                          </div><!-- card image -->
+                          <div class="card-content">
+                              <h2 class="card-title">Our Expertise
+                              <button type="button" id="show3" class="btn btn-custom pull-right" aria-label="Left Align">
+                                  <i class="fas fa-info-circle"></i>
+                              </button>
+                              </h2>
+                          </div><!-- card content -->
+                          <div class="card-reveal" id="expertisecard">
+                              <h2 class="card-title">Our Expertise
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                                </button>
+                              </h2>
+                              <p class="text-justify">Rejuvenate Wellness & Spa is dedicated solely to treating you to an essential and enduring state of well-being through a unique and distinctive approach. Our primary concern is to fulfil your wishes and improve your well-being.</p>
+                          </div><!-- card reveal -->
+                      </div>
+                  </div>
                 </div>
 
                 <div class="semi-footer row mt-2">
@@ -202,6 +238,17 @@
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
                 <script>
+
+                  $(function(){
+                      $('#show').on('click',function(){
+                          $('.card-reveal').slideToggle('slow');
+                      });
+
+                      $('.card-reveal .close').on('click',function(){
+                          $('.card-reveal').slideToggle('slow');
+                      });
+                  });
+
                   $(document).ready(function(){
                   $(window).scroll(function () {
                     if ($(this).scrollTop() > 50) {
@@ -219,6 +266,7 @@
                   			return false;
                   		});
                   });
+
                 </script>
           </div>
     </body>
